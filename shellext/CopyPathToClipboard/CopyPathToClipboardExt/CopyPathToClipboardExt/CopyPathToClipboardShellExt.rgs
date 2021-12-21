@@ -1,0 +1,37 @@
+HKCR
+{
+
+
+	NoRemove CLSID
+	{
+		ForceRemove {E6EB91D0-CB9A-4371-91C3-99D726393B92} = s 'CopyPathToClipboardShellExt Class'
+		{			
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}			
+		}
+	}
+		
+	NoRemove *
+    {
+        NoRemove ShellEx
+        {
+            NoRemove ContextMenuHandlers
+            {
+                ForceRemove CopyPathToClipboard = s '{E6EB91D0-CB9A-4371-91C3-99D726393B92}'
+            }
+        }
+    }
+    
+    NoRemove Folder
+    {
+        NoRemove ShellEx
+        {
+            NoRemove ContextMenuHandlers
+            {
+                ForceRemove CopyPathToClipboard = s '{E6EB91D0-CB9A-4371-91C3-99D726393B92}'
+            }
+        }
+    }
+}

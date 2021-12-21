@@ -1,0 +1,34 @@
+// CopyPathToClipboardExt.idl : IDL source for CopyPathToClipboardExt
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CopyPathToClipboardExt.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(39809273-18E9-4058-86C6-49BF635BD36E),
+	helpstring("ICopyPathToClipboardShellExt Interface"),
+	pointer_default(unique)
+]
+interface ICopyPathToClipboardShellExt : IUnknown{
+};
+[
+	uuid(43F35A7B-DC07-4455-AD7F-FFE2D55EF97A),
+	version(1.0),
+	helpstring("CopyPathToClipboardExt 1.0 Type Library")
+]
+library CopyPathToClipboardExtLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(E6EB91D0-CB9A-4371-91C3-99D726393B92),
+		helpstring("CopyPathToClipboardShellExt Class")
+	]
+	coclass CopyPathToClipboardShellExt
+	{
+		[default] interface ICopyPathToClipboardShellExt;
+	};
+};

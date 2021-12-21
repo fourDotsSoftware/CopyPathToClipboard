@@ -1,0 +1,10 @@
+; CopyPathToClipboardExt.def : Declares the module parameters.
+
+LIBRARY      "CopyPathToClipboardExt.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	
